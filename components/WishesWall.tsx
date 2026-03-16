@@ -142,7 +142,7 @@ export default function WishesWall() {
               </p>
               
               <div className="pt-6 text-right font-bold text-[var(--color-ember)]">
-                With all OUR LOBBBB AND MAGIC, TOO COMFORTABLE <3
+                With all OUR LOBBBB AND MAGIC, TOO COMFORTABLE 
                 <br />
                 <span className="font-cinzel text-xl mt-2 block">Always.</span>
               </div>
