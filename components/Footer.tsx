@@ -1,6 +1,14 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 export default function Footer() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <footer className="relative bg-[var(--color-navy)] border-t-2 border-[var(--color-gold)] py-12 px-4">
       {/* Hogwarts Crest - Simplified */}
@@ -64,21 +72,23 @@ export default function Footer() {
       </div>
 
       {/* Floating Sparks */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-        {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-xl animate-float-particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              bottom: '0',
-              animation: `floatParticle ${8 + i * 2}s linear infinite`,
-            }}
-          >
-            ✨
-          </div>
-        ))}
-      </div>
+      {mounted && (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+          {[...Array(5)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute text-xl animate-float-particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                bottom: '0',
+                animation: `floatParticle ${8 + i * 2}s linear infinite`,
+              }}
+            >
+              ✨
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Copyright */}
       <div className="mt-8 pt-6 border-t border-[var(--color-gold)] border-opacity-30 text-center text-xs text-[var(--color-ash)] opacity-60">

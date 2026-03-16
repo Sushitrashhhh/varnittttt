@@ -7,7 +7,10 @@ interface HeroProps {
 }
 
 export default function Hero({ onOpenLetter }: HeroProps) {
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true);
     // Lightning flash effect starts on render via inline styles
   }, []);
 
@@ -73,22 +76,24 @@ export default function Hero({ onOpenLetter }: HeroProps) {
       </div>
 
       {/* Floating Runes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-2xl opacity-10 animate-drift"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${i * 0.8}s`,
-              animationDuration: `${8 + i * 0.5}s`,
-            }}
-          >
-            ⚡
-          </div>
-        ))}
-      </div>
+      {mounted && (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute text-2xl opacity-10 animate-drift"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${i * 0.8}s`,
+                animationDuration: `${8 + i * 0.5}s`,
+              }}
+            >
+              ⚡
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

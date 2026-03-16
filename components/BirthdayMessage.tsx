@@ -1,11 +1,13 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function BirthdayMessage() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -84,22 +86,24 @@ export default function BirthdayMessage() {
         </div>
 
         {/* Floating Rune Symbols */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute text-3xl animate-drift"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${i * 0.5}s`,
-                animationDuration: `${10 + i}s`,
-              }}
-            >
-              ✦
-            </div>
-          ))}
-        </div>
+        {mounted && (
+          <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+            {[...Array(12)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute text-3xl animate-drift"
+                style={{
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  animationDelay: `${i * 0.5}s`,
+                  animationDuration: `${10 + i}s`,
+                }}
+              >
+                ✦
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
