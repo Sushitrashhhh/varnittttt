@@ -22,22 +22,12 @@ export default function Hero({ onOpenLetter }: HeroProps) {
         }}
       />
 
-      {/* Castle Silhouette SVG */}
-      <svg 
-        className="absolute top-12 w-96 h-96 opacity-20 drop-shadow-2xl"
-        viewBox="0 0 400 400"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        aria-label="Castle silhouette"
-      >
-        <path
-          d="M80 300 L80 150 L120 120 L120 80 L160 70 L160 120 L200 100 L200 120 L240 80 L240 120 L280 70 L280 120 L320 150 L320 300 M100 180 L110 180 L110 200 L100 200 Z M190 150 L210 150 L210 180 L190 180 Z M140 220 L160 220 L160 250 L140 250 Z M240 220 L260 220 L260 250 L240 250 Z"
-          stroke="var(--color-gold)"
-          strokeWidth="2"
-          fill="var(--color-charcoal)"
-        />
-      </svg>
+      {/* Background SVG Artwork */}
+      <img
+        src="/hero-bg.svg"
+        alt="Background artwork"
+        className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay"
+      />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6">

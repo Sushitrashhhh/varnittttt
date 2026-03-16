@@ -61,15 +61,14 @@ The Hogwarts Owlery
       <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50 overflow-y-auto">
         <div className="bg-[var(--color-ash)] text-[var(--color-charcoal)] rounded-lg shadow-2xl max-w-2xl w-full my-8 animate-fade-scale">
           {/* Letter Header */}
-          <div className="bg-gradient-to-r from-[var(--color-gold)] to-[var(--color-ember)] p-6 text-center">
-            <h2 className="font-cinzel text-3xl font-bold">A Letter from Hogwarts</h2>
-            <p className="text-sm mt-2 opacity-80">Sealed with Magic • March 17, 2005</p>
+<div className="bg-gradient-to-r from-[var(--color-gold)] to-[var(--color-ember)] p-4 sm:p-6 text-center">
+              <h2 className="font-cinzel text-xl sm:text-2xl md:text-3xl font-bold">A Letter from Hogwarts</h2>
+              <p className="text-xs sm:text-sm mt-2 opacity-80">Sealed with Magic • March 17, 2005</p>
           </div>
 
           {/* Letter Content */}
-          <div className="p-8 sm:p-12">
-            <div className="font-garamond text-lg leading-relaxed whitespace-pre-line mb-8">
-              {letterContent}
+            <div className="p-4 sm:p-8 md:p-12">
+              <div className="font-garamond text-base sm:text-lg leading-relaxed whitespace-pre-line mb-8">
             </div>
 
             {/* Wax Seal */}
@@ -119,10 +118,9 @@ The Hogwarts Owlery
     <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50">
       <div className="bg-[var(--color-ash)] text-[var(--color-charcoal)] rounded-lg shadow-2xl max-w-md w-full animate-fade-scale">
         {/* Header */}
-        <div className="bg-gradient-to-r from-[var(--color-gold)] to-[var(--color-ember)] p-6 text-center">
-          <h2 className="font-cinzel text-2xl font-bold">🔐 Unlock Your Letter</h2>
-          <p className="text-sm mt-2 opacity-80">Enter your date of birth to reveal the magic</p>
-        </div>
+          <div className="bg-gradient-to-r from-[var(--color-gold)] to-[var(--color-ember)] p-4 sm:p-6 text-center">
+            <h2 className="font-cinzel text-xl sm:text-2xl font-bold">🔐 Unlock Your Letter</h2>
+            <p className="text-xs sm:text-sm mt-2 opacity-80">Enter your date of birth to reveal the magic</p>
 
         {/* Content */}
         <div className="p-8">
