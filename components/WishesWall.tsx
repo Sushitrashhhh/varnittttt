@@ -138,11 +138,11 @@ export default function WishesWall() {
               </p>
               
               <p>
-                May this year bring you closer to all your dreams, fill your days with unforgettable adventures, and remind you of how truly extraordinary you are. Keep shining bright, stay true to yourself, and never stop casting your wonderful spell on the world!
+                May this year bring you closer to all your dreams, fill your days with unforgettable adventures, and remind you of how truly extraordinary you are. Keep shining bright, stay true to yourself, and never stop casting your wonderful spell on the world! And yes thanks for being on our side. We really LOVE YOUUUUUUUUUUUUUUUU. We are so lucky to have you in our lives and we can\'t wait to see all the amazing things you will accomplish in the years to come.
               </p>
               
               <div className="pt-6 text-right font-bold text-[var(--color-ember)]">
-                With all my love and magic,
+                With all OUR LOBBBB AND MAGIC, TOO COMFORTABLE <3
                 <br />
                 <span className="font-cinzel text-xl mt-2 block">Always.</span>
               </div>
