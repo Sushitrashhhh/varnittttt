@@ -69,9 +69,8 @@ The Hogwarts Owlery
           {/* Letter Content */}
             <div className="p-4 sm:p-8 md:p-12">
               <div className="font-garamond text-base sm:text-lg leading-relaxed whitespace-pre-line mb-8">
-            </div>
-
-            {/* Wax Seal */}
+                  {letterContent}
+                </div>
             <div className="flex justify-center mb-8">
               <div className="relative w-24 h-24">
                 <svg
@@ -121,9 +120,10 @@ The Hogwarts Owlery
           <div className="bg-gradient-to-r from-[var(--color-gold)] to-[var(--color-ember)] p-4 sm:p-6 text-center">
             <h2 className="font-cinzel text-xl sm:text-2xl font-bold">🔐 Unlock Your Letter</h2>
             <p className="text-xs sm:text-sm mt-2 opacity-80">Enter your date of birth to reveal the magic</p>
+            </div>
 
-        {/* Content */}
-        <div className="p-8">
+          {/* Content */}
+          <div className="p-6 sm:p-8">
           <form onSubmit={validateAndUnlock} className="space-y-6">
             <div>
               <label className="block text-sm font-semibold mb-2 text-[var(--color-charcoal)]">
